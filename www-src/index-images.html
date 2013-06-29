@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!-- Licensed under the Apache License. See footer for details. -->
+
+<html lang="en">
+
+<!-- ======================================================================= -->
+<head>
+<title>drome</title>
+
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.1, maximum-scale=10">
+-->
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=0.1, maximum-scale=10.0">
+<link rel="shortcut icon" href="images/icon-032.png" />
+
+<link rel="stylesheet" href="css/drome.css" />
+</head>
+
+<!-- ======================================================================= -->
+<body>
+
+<style>
+* { box-sizing: border-box } 
+
+.map {
+    xposition:       absolute;
+}
+
+.piece {
+    position:       absolute;
+    opacity:        0.70;
+}
+
+.ge-border {
+    position:       absolute;
+    border-color:   rgba(255,255,0,1.0);
+    border-radius:  10%;
+}
+
+.us-border {
+    position:       absolute;
+    border-color:   rgba(255,0,0,1.0);
+    border-radius:  10%;
+}
+
+#controls span, #controls button, #controls select, #controls input  {
+    font-size: 300%;
+}
+
+</style>
+
+<img class="map" src="vendor/drome/vassal/map.jpg">
+<div id="pieces"></div>
+
+<br>
+<div id="controls">
+    <button> play  </button>
+    <button> &lt;- </button>
+    <button> -&gt; </button>
+
+    <p>
+
+    <span>american strategy:</span>
+    <select>
+    <option> hello
+    <option> goodbye
+    </select>
+
+    <p>
+
+    <span>german strategy:</span>
+    <select>
+    <option> hello
+    <option> goodbye
+    </select>
+
+    <p>
+
+    <span>speed:</span>
+    <select>
+    <option> hello
+    <option> goodbye
+    </select>
+
+    <p>
+
+    <span>seed:</span>
+    <input>
+
+
+
+</div>
+
+<!-- ======================================================================= -->
+<script src="vendor/jquery.js"></script>
+<script src="vendor/d3.js" charset="utf-8" having-to-use-charset-is-lame=true></script>
+<script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+<script src="scripts/all-modules.js"></script>
+
+</body>
+</html>
+
+<!-- 
+#===============================================================================
+# Copyright 2013 Patrick Mueller
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#    http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#===============================================================================
+-->

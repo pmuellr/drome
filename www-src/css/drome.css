@@ -1,0 +1,46 @@
+/* Licensed under the Apache License. See footer for details. */
+
+* { box-sizing: border-box } 
+
+.map {
+    position:       absolute;
+}
+
+.piece {
+    position:       absolute;
+    opacity:        0.6;
+    border:         10px solid black;
+    border-radius:  15px;
+}
+
+.ge.piece {
+    border-color:   #000;
+}
+
+.us.piece {
+    border-color:   #F00;
+}
+
+.h0101 { top:   40px; left:  330px; }
+.h0102 { top:  176px; left:  330px; }
+.h0103 { top:  312px; left:  330px; }
+.h0201 { top:  110px; left:  443px; }
+.h0301 { top:   40px; left:  560px; }
+
+/*
+#-------------------------------------------------------------------------------
+# Copyright 2013 Patrick Mueller
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#    http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#-------------------------------------------------------------------------------
+*/
