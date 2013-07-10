@@ -1,31 +1,13 @@
 /* Licensed under the Apache License. See footer for details. */
 
-* { box-sizing: border-box } 
+* { 
+    box-sizing:     border-box; 
+} 
 
-.map {
-    position:       absolute;
+body {
+    padding:        0;
+    margin:         0;
 }
-
-.piece {
-    position:       absolute;
-    opacity:        0.6;
-    border:         10px solid black;
-    border-radius:  15px;
-}
-
-.ge.piece {
-    border-color:   #000;
-}
-
-.us.piece {
-    border-color:   #F00;
-}
-
-.h0101 { top:   40px; left:  330px; }
-.h0102 { top:  176px; left:  330px; }
-.h0103 { top:  312px; left:  330px; }
-.h0201 { top:  110px; left:  443px; }
-.h0301 { top:   40px; left:  560px; }
 
 /*
 #-------------------------------------------------------------------------------

@@ -2,6 +2,22 @@
 
 utils = exports
 
+NS_SVG   = "http://www.w3.org/2000/svg"
+NS_XLINK = "http://www.w3.org/1999/xlink"
+
+#-------------------------------------------------------------------------------
+utils.createSVGElement = (name) ->
+    element = document.createElementNS NS_SVG, name
+
+    return element
+
+#-------------------------------------------------------------------------------
+utils.createSVGImage = (url) ->
+    image = utils.createSVGElement "image"
+    image.setAttributeNS NS_XLINK, "href", url
+
+    return image
+
 #-------------------------------------------------------------------------------
 utils.dump = (text) ->
     $log = $ "#log"

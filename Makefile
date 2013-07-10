@@ -136,9 +136,9 @@ vendor:
 	@unzip -q -o vendor/drome/vassal/tmp/dl.zip     -d vendor/drome/vassal/tmp
 	@unzip -q -o vendor/drome/vassal/tmp/metzv1.dat -d vendor/drome/vassal/tmp
 
-	@cp vendor/drome/vassal/tmp/images/CRT.png         vendor/drome/vassal/chart-CRT.png
-	@cp vendor/drome/vassal/tmp/images/SOP.png         vendor/drome/vassal/chart-SOP.png
-	@cp vendor/drome/vassal/tmp/images/TEC.png         vendor/drome/vassal/chart-TEC.png
+	@cp vendor/drome/vassal/tmp/images/CRT.png          vendor/drome/vassal/chart-CRT.png
+	@cp vendor/drome/vassal/tmp/images/SOP.png          vendor/drome/vassal/chart-SOP.png
+	@cp vendor/drome/vassal/tmp/images/TEC.png          vendor/drome/vassal/chart-TEC.png
 
 	@cp vendor/drome/vassal/tmp/images/Metzmap2.jpg		vendor/drome/vassal/map.jpg
 
@@ -162,6 +162,8 @@ vendor:
 	@cp vendor/drome/vassal/tmp/images/MG5591125.PNG 	vendor/drome/vassal/piece-g-1125.png
 	@cp vendor/drome/vassal/tmp/images/MG5591126.PNG 	vendor/drome/vassal/piece-g-1126.png
 	@cp vendor/drome/vassal/tmp/images/MGGarM.png 		vendor/drome/vassal/piece-g-gar.png
+
+	@convert -crop 1095x1589+285+0  vendor/drome/vassal/map.jpg  vendor/drome/vassal/map-thin.jpg
 
 	@echo "files in this directory from Victory Point Games site"  >> vendor/drome/vassal/README.txt
 	@echo "for the game Drive on Metz, at:"                        >> vendor/drome/vassal/README.txt

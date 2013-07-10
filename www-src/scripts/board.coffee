@@ -2,13 +2,17 @@
 
 board = exports
 
-offsetX = 320
-offsetY =  45
-hexW    = 116
-hexH    = 137.5
+utils = require "./utils"
 
 #-------------------------------------------------------------------------------
-board.hexes = {}
+OffsetX = 367
+OffsetY =  84
+HexW    = 116
+HexH    = 137.0
+
+#-------------------------------------------------------------------------------
+board.hexes         = {}
+board.directions    = "n ne se s sw nw".split " "
 
 #-------------------------------------------------------------------------------
 run = ->
@@ -16,6 +20,7 @@ run = ->
     buildTerrain()
     buildRoads()
     buildRivers()
+    drawDots()
 
 #-------------------------------------------------------------------------------
 class Hex
@@ -26,15 +31,30 @@ class Hex
         if @col%2
             evenOffset = 0
         else
-            evenOffset = hexH / 2
+            evenOffset = HexH / 2
 
-        @x  = offsetX + (col-1)*hexW
-        @y  = offsetY + (row-1)*hexH + evenOffset
+        @x  = OffsetX + (col-1)*HexW
+        @y  = OffsetY + (row-1)*HexH + evenOffset
 
         @terrain = "clear"
         @roads   = {}
         @rivers  = {}
         @nabors  = {}
+
+#-------------------------------------------------------------------------------
+drawDots = () ->
+    board$ = $ "#board"
+    for id, hex of board.hexes
+
+        dot$ = $ utils.createSVGElement "circle"
+        dot$.attr
+            cx:         hex.x
+            cy:         hex.y
+            r:          5
+            fill:       "black"
+            opacity:    0.7
+
+        board$.append dot$
 
 #-------------------------------------------------------------------------------
 buildHexes = () ->
@@ -46,10 +66,8 @@ buildHexes = () ->
             hex = new Hex row, col
             hexes[hex.id] = hex
 
-    directions = ["n", "ne", "se", "s", "sw", "nw"]
-
     for id, hex of hexes
-        for direction in directions
+        for direction in board.directions
             hex.nabors[direction] = calcNeighbor hexes, hex, direction
 
     return hexes
